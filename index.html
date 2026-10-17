@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo Dropshipping Pro - Edición Definitiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-highlight: rgba(255, 255, 255, 0.2);
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+        }
+
+        .mod1 { --accent-1: #00d2ff; --accent-2: #9d50bb; --accent-3: #00b09b; --accent-4: #ff9966; }
+        .mod2 { --accent-1: #00f5a0; --accent-2: #00d9ff; --accent-3: #ffd60a; --accent-4: #ff6b6b; }
+        .mod3 { --accent-1: #ff006e; --accent-2: #b14eff; --accent-3: #00d4ff; --accent-4: #ffd60a; }
+        .mod4 { --accent-1: #ffd60a; --accent-2: #ff6b35; --accent-3: #00f5a0; --accent-4: #00d4ff; }
+        .mod5 { --accent-1: #b14eff; --accent-2: #ffd60a; --accent-3: #00d4ff; --accent-4: #ff006e; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-main);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 40px;
+            line-height: 1.6;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .main-header {
+            text-align: center;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-header h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #00d2ff, #9d50bb, #ff006e, #ffd60a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .module-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .module-btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .module-btn.mod1-btn { background: linear-gradient(135deg, #00d2ff, #9d50bb); color: white; }
+        .module-btn.mod2-btn { background: linear-gradient(135deg, #00f5a0, #00d9ff); color: #0f0c29; }
+        .module-btn.mod3-btn { background: linear-gradient(135deg, #ff006e, #b14eff); color: white; }
+        .module-btn.mod4-btn { background: linear-gradient(135deg, #ffd60a, #ff6b35); color: #0f0c29; }
+        .module-btn.mod5-btn { background: linear-gradient(135deg, #b14eff, #ffd60a); color: #0f0c29; }
+
+        .module-btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .module-btn.active { box-shadow: 0 0 30px rgba(255,255,255,0.3); }
+
+        .module-section { display: none; }
+        .module-section.active { display: flex; flex-direction: column; gap: 30px; }
+
+        .module-header {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+        }
+
+        .module-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .mod1 .module-header h2 { background: linear-gradient(to right, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mod2 .module-header h2 { background: linear-gradient(to right, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mod3 .module-header h2 { background: linear-gradient(to right, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mod4 .module-header h2 { background: linear-gradient(to right, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mod5 .module-header h2 { background: linear-gradient(to right, var(--accent-1), var(--accent-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .module-header .module-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .module-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .mod1 .module-badge { background: rgba(0, 210, 255, 0.2); color: var(--accent-1); border: 1px solid rgba(0, 210, 255, 0.3); }
+        .mod2 .module-badge { background: rgba(0, 245, 160, 0.2); color: var(--accent-1); border: 1px solid rgba(0, 245, 160, 0.3); }
+        .mod3 .module-badge { background: rgba(255, 0, 110, 0.2); color: var(--accent-1); border: 1px solid rgba(255, 0, 110, 0.3); }
+        .mod4 .module-badge { background: rgba(255, 214, 10, 0.2); color: var(--accent-1); border: 1px solid rgba(255, 214, 10, 0.3); }
+        .mod5 .module-badge { background: rgba(177, 78, 255, 0.2); color: var(--accent-1); border: 1px solid rgba(177, 78, 255, 0.3); }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+        .card { padding: 30px; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-5px); border-color: var(--glass-highlight); }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h4 { font-size: 1.1rem; margin: 15px 0 10px; }
+        .mod1 .card h4 { color: var(--accent-1); }
+        .mod2 .card h4 { color: var(--accent-1); }
+        .mod3 .card h4 { color: var(--accent-1); }
+        .mod4 .card h4 { color: var(--accent-1); }
+        .mod5 .card h4 { color: var(--accent-1); }
+
+        .card p { font-size: 0.95rem; color: #e0e0e0; margin-bottom: 10px; }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .mod1 .badge-tech { background: rgba(0, 210, 255, 0.2); color: var(--accent-1); border: 1px solid rgba(0, 210, 255, 0.3); }
+        .mod1 .badge-strat { background: rgba(157, 80, 187, 0.2); color: var(--accent-2); border: 1px solid rgba(157, 80, 187, 0.3); }
+        .mod1 .badge-warn { background: rgba(255, 153, 102, 0.2); color: var(--accent-4); border: 1px solid rgba(255, 153, 102, 0.3); }
+
+        .mod2 .badge-eco { background: rgba(0, 245, 160, 0.2); color: var(--accent-1); border: 1px solid rgba(0, 245, 160, 0.3); }
+        .mod2 .badge-data { background: rgba(0, 217, 255, 0.2); color: var(--accent-2); border: 1px solid rgba(0, 217, 255, 0.3); }
+        .mod2 .badge-alert { background: rgba(255, 107, 107, 0.2); color: var(--accent-4); border: 1px solid rgba(255, 107, 107, 0.3); }
+
+        .mod3 .badge-viral { background: rgba(255, 0, 110, 0.2); color: var(--accent-1); border: 1px solid rgba(255, 0, 110, 0.3); }
+        .mod3 .badge-ai { background: rgba(177, 78, 255, 0.2); color: var(--accent-2); border: 1px solid rgba(177, 78, 255, 0.3); }
+        .mod3 .badge-free { background: rgba(0, 245, 160, 0.2); color: #00f5a0; border: 1px solid rgba(0, 245, 160, 0.3); }
+
+        .mod4 .badge-case { background: rgba(255, 214, 10, 0.2); color: var(--accent-1); border: 1px solid rgba(255, 214, 10, 0.3); }
+        .mod4 .badge-step { background: rgba(0, 245, 160, 0.2); color: var(--accent-3); border: 1px solid rgba(0, 245, 160, 0.3); }
+
+        .mod5 .badge-million { background: rgba(177, 78, 255, 0.2); color: var(--accent-1); border: 1px solid rgba(177, 78, 255, 0.3); }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #a5d6ff;
+            margin: 15px 0;
+            border-left: 3px solid var(--accent-1);
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th { text-align: left; padding: 12px; border-bottom: 1px solid var(--glass-border); font-size: 0.9rem; }
+        .mod1 th { color: var(--accent-1); }
+        .mod2 th { color: var(--accent-1); }
+        .mod3 th { color: var(--accent-1); }
+        .mod4 th { color: var(--accent-1); }
+        .mod5 th { color: var(--accent-1); }
+        td { padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.9rem; }
+        tr:last-child td { border-bottom: none; }
+
+        .tool-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .tool-name { font-weight: 600; }
+        .mod1 .tool-name { color: var(--accent-3); }
+        .mod2 .tool-name { color: var(--accent-1); }
+        .mod3 .tool-name { color: var(--accent-1); }
+        .mod4 .tool-name { color: var(--accent-1); }
+        .mod5 .tool-name { color: var(--accent-1); }
+        .tool-desc { font-size: 0.85rem; color: var(--text-muted); text-align: right; max-width: 60%; }
+
+        .highlight-box {
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            border: 1px dashed var(--glass-border);
+        }
+        .mod1 .highlight-box { background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(157, 80, 187, 0.1)); }
+        .mod2 .highlight-box { background: linear-gradient(135deg, rgba(0, 245, 160, 0.1), rgba(0, 217, 255, 0.1)); }
+        .mod3 .highlight-box { background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(177, 78, 255, 0.1)); }
+        .mod4 .highlight-box { background: linear-gradient(135deg, rgba(255, 214, 10, 0.1), rgba(255, 107, 53, 0.1)); }
+        .mod5 .highlight-box { background: linear-gradient(135deg, rgba(177, 78, 255, 0.1), rgba(255, 214, 10, 0.1)); }
+
+        .hook-box {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border-left: 3px solid var(--accent-1);
+        }
+        .hook-title { font-weight: 700; color: var(--accent-4); font-size: 0.9rem; margin-bottom: 5px; }
+        .hook-example { font-style: italic; color: #ccc; font-size: 0.85rem; }
+
+        .time-slot {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        .time-slot strong { color: var(--accent-3); }
+
+        .pillar-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 15px;
+        }
+        .pillar-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            color: #0f0c29;
+            flex-shrink: 0;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 5px; }
+
+        .vs-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+        .vs-divider {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-3);
+        }
+
+        .level-card {
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid var(--glass-border);
+        }
+        .level-card h4 { font-size: 1.3rem; margin-bottom: 15px; }
+        .level-price { font-size: 0.9rem; color: var(--accent-3); margin-bottom: 15px; }
+
+        .phase-card {
+            padding: 25px;
+            border-radius: 15px;
+        }
+        .phase-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        /* Color Palette Display */
+        .color-palette {
+            display: flex;
+            gap: 8px;
+            margin: 10px 0;
+            height: 40px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .color-swatch {
+            flex: 1;
+            border-radius: 4px;
+        }
+
+        /* Case Study Cards */
+        .case-card {
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid var(--glass-border);
+        }
+        .case-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .case-icon {
+            font-size: 3rem;
+        }
+        .case-title { font-size: 1.5rem; font-weight: 800; }
+        .case-subtitle { font-size: 0.9rem; color: var(--text-muted); }
+
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+        }
+        .timeline-step {
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            color: #0f0c29;
+        }
+        .timeline-content { flex: 1; }
+        .timeline-content strong { color: var(--accent-1); display: block; margin-bottom: 5px; }
+        .timeline-content p { font-size: 0.85rem; margin: 0; }
+
+        /* Script Box */
+        .script-box {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-1);
+            margin: 15px 0;
+        }
+        .script-line {
+            margin: 8px 0;
+            padding-left: 15px;
+            border-left: 2px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+        }
+        .script-timing {
+            color: var(--accent-4);
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        /* Millionaire Cards */
+        .millionaire-card {
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 214, 10, 0.05), rgba(177, 78, 255, 0.05));
+            border: 1px solid rgba(255, 214, 10, 0.2);
+        }
+        .millionaire-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .millionaire-name { font-size: 1.4rem; font-weight: 800; color: var(--accent-2); }
+        .millionaire-result {
+            background: rgba(255, 214, 10, 0.2);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            color: var(--accent-1);
+            font-size: 0.9rem;
+        }
+
+        .footer-card {
+            text-align: center;
+            padding: 30px;
+        }
+        .footer-card .final-advice {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media print {
+            body { padding: 20px; background: #1a1a2e; -webkit-print-color-adjust: exact; }
+            .glass { break-inside: avoid; box-shadow: none; border: 1px solid #444; }
+            .module-section { display: block !important; page-break-before: always; }
+            .module-nav { display: none; }
+            .main-header h1 { font-size: 2.5rem; }
+            .grid-2, .grid-3, .grid-4 { gap: 15px; }
+        }
+
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+            .vs-container { grid-template-columns: 1fr; }
+            .main-header h1 { font-size: 2rem; }
+            .module-header h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- ============================================ -->
+    <!-- HEADER PRINCIPAL -->
+    <!-- ============================================ -->
+    <header class="glass main-header">
+        <h1>🎓 CURSO COMPLETO DROPSHIPPING PRO</h1>
+        <p class="subtitle">Edición Definitiva: Arquitectura + Productos + Orgánico + Casos Reales + Millonarios</p>
+        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                <strong style="color: #00d2ff;">📦 5 Módulos</strong>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                <strong style="color: #00f5a0;">🎯 100% Accionable</strong>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.1);">
+                <strong style="color: #ff006e;">🚀 Casos Reales</strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- NAVEGACIÓN -->
+    <!-- ============================================ -->
+    <div class="module-nav">
+        <button class="module-btn mod1-btn active" onclick="showModule(1)">🏗️ M1: Shopify</button>
+        <button class="module-btn mod2-btn" onclick="showModule(2)">🎯 M2: Productos</button>
+        <button class="module-btn mod3-btn" onclick="showModule(3)">🔥 M3: Orgánico</button>
+        <button class="module-btn mod4-btn" onclick="showModule(4)">📋 M4: Casos Prácticos</button>
+        <button class="module-btn mod5-btn" onclick="showModule(5)">💰 M5: Millonarios</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MÓDULO 1: ARQUITECTURA SHOPIFY -->
+    <!-- ============================================ -->
+    <div id="module1" class="module-section mod1 active">
+        <div class="glass module-header">
+            <div class="module-badge">Módulo 1: Fundamentos Elite</div>
+            <h2>ARQUITECTURA SHOPIFY PRO</h2>
+            <p class="module-subtitle">Guía Técnica + Herramientas IA + Temas Ganadores + Psicología del Color</p>
+        </div>
+
+        <!-- NUEVO: Herramientas IA para crear páginas -->
+        <div class="card glass">
+            <span class="badge badge-tech">Herramientas IA 2026</span>
+            <h3>🤖 Mejores Herramientas para Crear Páginas (Gratis + Pago + IA)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Herramienta</th>
+                        <th>Tipo</th>
+                        <th>Superpoder</th>
+                        <th>Precio</th>
+                        <th>Ideal Para</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Shopify Magic</strong></td>
+                        <td>IA Nativa</td>
+                        <td>Genera descripciones, emails y SEO dentro de Shopify</td>
+                        <td>Incluido</td>
+                        <td>🥇 Todos los usuarios Shopify</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Framer AI</strong></td>
+                        <td>IA + Diseño</td>
+                        <td>Genera sitios completos desde un prompt de texto</td>
+                        <td>Gratis / $5/mes</td>
+                        <td>Landing pages rápidas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Durable AI</strong></td>
+                        <td>IA Total</td>
+                        <td>Sitio completo en 30 segundos con copy incluido</td>
+                        <td>$12/mes</td>
+                        <td>Principiantes absolutos</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10Web AI</strong></td>
+                        <td>IA + WordPress</td>
+                        <td>Clona cualquier web y la convierte en editable</td>
+                        <td>$10/mes</td>
+                        <td>Inspiración de competidores</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canva Websites</strong></td>
+                        <td>Visual</td>
+                        <td>Drag & drop con miles de templates</td>
+                        <td>Gratis / Pro $12/mes</td>
+                        <td>Diseño sin código</td>
+                    </tr>
+                    <tr>
+                        <td><strong>GemPages</strong></td>
+                        <td>Page Builder</td>
+                        <td>300+ bloques + IA para Shopify</td>
+                        <td>$29/mes</td>
+                        <td>Personalización extrema</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PageFly</strong></td>
+                        <td>Page Builder</td>
+                        <td>El más completo para landing pages de producto</td>
+                        <td>Gratis / $24/mes</td>
+                        <td>🥇 Tiendas de objeto único</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Zipify Pages</strong></td>
+                        <td>Conversión</td>
+                        <td>Creado por un vendedor de $100M, enfocado en ventas</td>
+                        <td>$39/mes</td>
+                        <td>Máxima conversión</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="highlight-box">
+                <strong>💡 Recomendación Pro:</strong> Para tiendas de objeto único, usa <strong>PageFly (gratis)</strong> + <strong>Shopify Magic (incluido)</strong>. Con $0 tienes un stack profesional completo. Solo añade GemPages cuando factures +$5k/mes y necesites más bloques.
+            </div>
+        </div>
+
+        <!-- Tech Foundation -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-tech">Online Store 2.0</span>
+                <h3>🏗️ El Motor: Dawn + OS 2.0</h3>
+                <p><strong>La Regla de Oro:</strong> Olvida los temas legacy. Tu tienda DEBE estar en Online Store 2.0. Esto permite secciones en TODAS las páginas, no solo en el home.</p>
+                
+                <h4>¿Por qué Dawn es la base obligatoria?</h4>
+                <ul style="padding-left: 20px; color: #ccc; font-size: 0.9rem;">
+                    <li><strong>Rendimiento Nativo:</strong> 35% más rápido que Debut. Cero jQuery innecesario.</li>
+                    <li><strong>Arquitectura JSON:</strong> Permite arrastrar y soltar bloques en páginas de producto.</li>
+                    <li><strong>App Blocks:</strong> Las apps se integran limpiamente sin ensuciar el código Liquid.</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>💡 Estrategia Objeto Único:</strong> Elimina menús de navegación complejos. Tu tema debe actuar como una Landing Page. Usa el tema <em>Pipeline</em> o <em>Startup</em> si necesitas diseño premium pre-hecho, pero siempre sobre base OS 2.0.
+                </div>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-tech">Liquid Avanzado</span>
+                <h3>⚙️ Personalización Extrema</h3>
+                <p>No dependas de apps para todo. Usa Liquid para crear funcionalidades a medida que cargan instantáneamente.</p>
+
+                <h4>Metafields: Tu Arma Secreta</h4>
+                <p>Almacena datos estructurados (specs, garantías, videos) nativamente en Shopify. Accede vía Liquid:</p>
+                <div class="code-block">{{ product.metafields.custom.material }}</div>
+                
+                <h4>Patrón de Fragmentación (Pro Tip)</h4>
+                <p>Si tienes +50 especificaciones, Shopify limita la visualización. Solución: Divide en múltiples metafields (<code>spec_sensor</code>, <code>spec_power</code>) e itera con bucles Liquid para renderizar dinámicamente sin tocar el límite de 50 fuentes.</p>
+            </div>
+        </div>
+
+        <!-- NUEVO: Mejores Temas Shopify -->
+        <div class="card glass">
+            <span class="badge badge-strat">Temas Ganadores</span>
+            <h3>🎨 Los Mejores Temas Shopify por Tipo de Tienda</h3>
+            <div class="grid-3" style="margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">🆓 GRATIS</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Dawn</span>
+                        <span class="tool-desc">El estándar. Rápido y versátil</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Sense</span>
+                        <span class="tool-desc">Belleza y bienestar</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Refresh</span>
+                        <span class="tool-desc">Productos masculinos/tech</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Spotlight</span>
+                        <span class="tool-desc">Moda y accesorios</span>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">💰 PAGO (Objeto Único)</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Startup ($320)</span>
+                        <span class="tool-desc">Diseñado para 1 producto</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Pipeline ($350)</span>
+                        <span class="tool-desc">Storytelling visual</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Impact ($350)</span>
+                        <span class="tool-desc">Video-first, muy dinámico</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Prestige ($350)</span>
+                        <span class="tool-desc">Estética premium/lujo</span>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">🏆 MÁS EFECTIVOS 2026</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Dawn + PageFly</span>
+                        <span class="tool-desc">Combo gratis imbatible</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Impact + Gempages</span>
+                        <span class="tool-desc">Para marcas con video</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Startup + Zipify</span>
+                        <span class="tool-desc">Máxima conversión</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUEVO: Paletas de Colores -->
+        <div class="card glass">
+            <span class="badge badge-strat">Psicología del Color</span>
+            <h3>🎨 Paletas Ganadoras por Nicho</h3>
+            <p><strong>El color influye en el 85% de las decisiones de compra.</strong> Usa estas combinaciones probadas:</p>
+            
+            <div class="grid-2" style="margin-top: 20px;">
+                <div>
+                    <h4>💪 Fitness / Energía</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #FF4500;"></div>
+                        <div class="color-swatch" style="background: #1A1A2E;"></div>
+                        <div class="color-swatch" style="background: #FFFFFF;"></div>
+                        <div class="color-swatch" style="background: #FFD700;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Naranja = acción. Negro = poder. Dorado = premium.</p>
+
+                    <h4 style="margin-top: 20px;">🧴 Belleza / Skincare</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #F5E6E8;"></div>
+                        <div class="color-swatch" style="background: #D4A5A5;"></div>
+                        <div class="color-swatch" style="background: #FFFFFF;"></div>
+                        <div class="color-swatch" style="background: #B76E79;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Rosa palo = feminidad. Blanco = pureza. Rosa intenso = lujo accesible.</p>
+
+                    <h4 style="margin-top: 20px;">🐾 Mascotas</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #4ECDC4;"></div>
+                        <div class="color-swatch" style="background: #FF6B6B;"></div>
+                        <div class="color-swatch" style="background: #FFF9E3;"></div>
+                        <div class="color-swatch" style="background: #2C3E50;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Turquesa = diversión. Coral = calidez. Crema = hogar.</p>
+                </div>
+                <div>
+                    <h4>📱 Tech / Gadgets</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #0A0A0A;"></div>
+                        <div class="color-swatch" style="background: #00D4FF;"></div>
+                        <div class="color-swatch" style="background: #1A1A2E;"></div>
+                        <div class="color-swatch" style="background: #FFFFFF;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Negro = sofisticación. Cyan = innovación. Minimalismo = confianza.</p>
+
+                    <h4 style="margin-top: 20px;">🏠 Hogar / Cocina</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #F7F4EF;"></div>
+                        <div class="color-swatch" style="background: #8B7355;"></div>
+                        <div class="color-swatch" style="background: #4A7C59;"></div>
+                        <div class="color-swatch" style="background: #FFFFFF;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Beige = calidez. Marrón = natural. Verde = fresco/orgánico.</p>
+
+                    <h4 style="margin-top: 20px;">👶 Bebé / Niños</h4>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background: #B8E6FF;"></div>
+                        <div class="color-swatch" style="background: #FFB8D9;"></div>
+                        <div class="color-swatch" style="background: #FFF5CC;"></div>
+                        <div class="color-swatch" style="background: #FFFFFF;"></div>
+                    </div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Pasteles = ternura. Suavidad = seguridad para padres.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>🎯 Regla 60-30-10:</strong> 60% color dominante (fondo), 30% secundario (secciones), 10% acento (botones CTA). El color del botón de compra debe ser SIEMPRE el acento para máximo contraste.
+            </div>
+        </div>
+
+        <!-- Performance -->
+        <div class="card glass">
+            <span class="badge badge-warn">Core Web Vitals</span>
+            <h3>🚀 Optimización de Velocidad (Conversión = Dinero)</h3>
+            <div class="grid-3" style="margin-top: 20px;">
+                <div>
+                    <h4>LCP (Carga Visual)</h4>
+                    <p><strong>Meta:</strong> < 2.5s</p>
+                    <p><strong>ERROR FATAL:</strong> Nunca pongas <code>loading="lazy"</code> en la imagen principal (Hero).</p>
+                    <p><strong>SOLUCIÓN:</strong> Usa <code>fetchpriority="high"</code> en la etiqueta &lt;img&gt; del LCP. Reduce LCP hasta un 30%.</p>
+                </div>
+                <div>
+                    <h4>CLS (Estabilidad)</h4>
+                    <p><strong>Meta:</strong> < 0.1</p>
+                    <p><strong>CAUSA:</strong> Imágenes sin dimensiones reservadas.</p>
+                    <p><strong>SOLUCIÓN:</strong> Siempre define <code>width</code> y <code>height</code> explícitos. Usa CSS <code>aspect-ratio</code> para contenedores modernos.</p>
+                </div>
+                <div>
+                    <h4>INP (Interactividad)</h4>
+                    <p><strong>Meta:</strong> < 200ms</p>
+                    <p><strong>CAUSA:</strong> JavaScript bloqueante.</p>
+                    <p><strong>SOLUCIÓN:</strong> Usa <code>defer</code> en scripts no críticos. Fragmenta tareas largas con <code>requestIdleCallback()</code>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Providers -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-strat">Supply Chain</span>
+                <h3>📦 Matriz de Proveedores: ¿A quién elegir?</h3>
+                <p>La elección depende estrictamente de tu volumen diario. No saltes etapas.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Proveedor</th>
+                            <th>Ideal Para</th>
+                            <th>Ventaja Clave</th>
+                            <th>Riesgo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CJ Dropshipping</strong></td>
+                            <td>Pruebas / < 30 orders/día</td>
+                            <td>Catálogo masivo, integración fácil</td>
+                            <td>Calidad variable, envíos lentos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zendrop</strong></td>
+                            <td>Escala Media / Branding</td>
+                            <td>Envíos rápidos USA, Custom Packaging</td>
+                            <td>Costo mensual, catálogo menor</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Agente Privado</strong></td>
+                            <td>Escala Alta / >80 orders/día</td>
+                            <td>Precio fábrica (-30%), Envío 4-8 días</td>
+                            <td>Requiere volumen mínimo comprobable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-strat">Validación</span>
+                <h3>✅ Protocolo de Verificación (SOP)</h3>
+                <p>Antes de vender, ejecuta este checklist. Si fallan en uno, descártalos.</p>
+                <ol style="padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 2;">
+                    <li><strong>Muestra Física:</strong> Verifica calidad real vs. fotos.</li>
+                    <li><strong>Test de Envío:</strong> Cronometra tiempo real a tu país objetivo.</li>
+                    <li><strong>Soporte Stress-Test:</strong> Haz preguntas difíciles. Mide tiempo de respuesta (<24h ideal).</li>
+                    <li><strong>Datos QC:</strong> Exige reporte de tasa de defectos últimos 90 días.</li>
+                    <li><strong>Contrato:</strong> Si >80 órdenes/día, firma SLA con cláusula de indemnización.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Tools & Automation -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-tech">Stack Tecnológico</span>
+                <h3>🛠️ Arsenal de Herramientas Esenciales</h3>
+                <div class="tool-item">
+                    <span class="tool-name">Shopify Flow</span>
+                    <span class="tool-desc">Automatización nativa. Gestiona inventario, tags VIP y alertas de fraude sin Zapier.</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Klaviyo</span>
+                    <span class="tool-desc">Email/SMS Marketing. Segmentación avanzada basada en comportamiento de compra.</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Judge.me</span>
+                    <span class="tool-desc">Reseñas ligeras. No ralentiza la tienda como Yotpo. Importa reseñas de AliExpress.</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Vitals / Gempages</span>
+                    <span class="tool-desc">Page Builder + 40 apps en 1. Reduce HTTP requests vs instalar apps individuales.</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">TinyIMG / Crush.pics</span>
+                    <span class="tool-desc">Compresión automática de imágenes sin pérdida de calidad visible.</span>
+                </div>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-strat">Escalabilidad Futura</span>
+                <h3>📈 Ruta de Evolución Técnica</h3>
+                <p>No empieces por el techo. Sigue esta progresión lógica:</p>
+                
+                <div style="border-left: 2px solid var(--accent-2); padding-left: 20px; margin-top: 20px;">
+                    <h4 style="color: white; margin-top: 0;">Nivel 1: Liquid Optimizado</h4>
+                    <p style="font-size: 0.85rem;">Tema Dawn + Metafields + Flow. Costo: Bajo. Ideal para validar y escalar hasta $50k/mes.</p>
+                    
+                    <h4 style="color: white;">Nivel 2: Hydrogen (Headless)</h4>
+                    <p style="font-size: 0.85rem;">React + Shopify API. Control total UI/UX. Costo: $50k+. Solo si tu diferenciador es la experiencia digital única.</p>
+                    
+                    <h4 style="color: white;">Nivel 3: Shopify as Backend</h4>
+                    <p style="font-size: 0.85rem;">Shopify solo gestiona pagos/inventario. Frontend 100% custom. Para marcas globales omnicanal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Mod 1 -->
+        <div class="card glass footer-card">
+            <p style="color: var(--accent-1); font-weight: 600; margin-bottom: 5px;">💎 CONSEJO FINAL DE ORO</p>
+            <p class="final-advice">La personalización extrema no significa añadir más elementos, sino eliminar fricción. Cada línea de código Liquid, cada app instalada y cada proveedor seleccionado debe responder a una sola pregunta: <strong>"¿Esto ayuda al cliente a comprar en menos de 3 clics?"</strong>. Si la respuesta es no, elimínalo.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MÓDULO 2: CAZA DE PRODUCTOS (SIN CAMBIOS) -->
+    <!-- ============================================ -->
+    <div id="module2" class="module-section mod2">
+        <div class="glass module-header">
+            <div class="module-badge">Módulo 2: Investigación de Productos</div>
+            <h2>CAZA DE PRODUCTOS GANADORES</h2>
+            <p class="module-subtitle">Espionaje + Descubrimiento Predictivo | Filtros Cuantitativos Estrictos | Triangulación de Datos</p>
+        </div>
+
+        <!-- Ecosystem -->
+        <div class="card glass">
+            <span class="badge badge-eco">Ecosistema</span>
+            <h3>🧭 Las 4 Categorías de Inteligencia Comercial</h3>
+            <div class="grid-4" style="margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🏪</div>
+                    <h4 style="margin-top: 0;">Spy de Tiendas</h4>
+                    <p style="font-size: 0.85rem;">Analiza ventas, apps y temas de competidores en Shopify.</p>
+                    <p style="font-size: 0.8rem; color: var(--accent-1);">Dropship.io · PPSPY · Koala Inspector</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📢</div>
+                    <h4 style="margin-top: 0;">Spy de Anuncios</h4>
+                    <p style="font-size: 0.85rem;">Valida demanda viendo qué anuncios llevan semanas activos.</p>
+                    <p style="font-size: 0.8rem; color: var(--accent-1);">Minea · PiPiAds · BigSpy</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🤖</div>
+                    <h4 style="margin-top: 0;">Todo en Uno</h4>
+                    <p style="font-size: 0.85rem;">Predicción IA + proveedores + automatización en una sola app.</p>
+                    <p style="font-size: 0.8rem; color: var(--accent-1);">Sell The Trend · AutoDS · Tradelle</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📈</div>
+                    <h4 style="margin-top: 0;">Tendencias</h4>
+                    <p style="font-size: 0.85rem;">Detectan demanda macro antes de que sature el mercado.</p>
+                    <p style="font-size: 0.8rem; color: var(--accent-1);">Google Trends · Exploding Topics</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tool Comparison -->
+        <div class="card glass">
+            <span class="badge badge-eco">Análisis Comparativo</span>
+            <h3>⚔️ Las Mejores Herramientas Frente a Frente</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Herramienta</th>
+                        <th>Categoría</th>
+                        <th>Superpoder</th>
+                        <th>Precio</th>
+                        <th>Veredicto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Minea</strong></td>
+                        <td>Ads Spy</td>
+                        <td>Success Radar IA + análisis de influencers</td>
+                        <td>$49/mes</td>
+                        <td>🏆 La más completa multi-plataforma</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sell The Trend</strong></td>
+                        <td>Todo en Uno</td>
+                        <td>NEXUS AI predice antes de saturar</td>
+                        <td>$29.97/mes</td>
+                        <td>🏆 Mejor para principiantes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PiPiAds</strong></td>
+                        <td>Ads Spy TikTok</td>
+                        <td>Filtros avanzados específicos de TikTok</td>
+                        <td>$77/mes</td>
+                        <td>🥇 Imprescindible si vendes en TikTok</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dropship.io</strong></td>
+                        <td>Spy Tiendas</td>
+                        <td>Ventas reales estimadas de competidores</td>
+                        <td>$39/mes</td>
+                        <td>🥇 El mejor para medir competencia</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WinningHunter</strong></td>
+                        <td>Híbrido</td>
+                        <td>Detecta productos en crecimiento acelerado</td>
+                        <td>$49/mes</td>
+                        <td>🥈 Buena alternativa 2 en 1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Koala Inspector</strong></td>
+                        <td>Extensión Chrome</td>
+                        <td>Análisis instantáneo de cualquier Shopify</td>
+                        <td>Gratis</td>
+                        <td>🆓 Obligatorio tenerla instalada</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Trends</strong></td>
+                        <td>Tendencias</td>
+                        <td>Valida demanda sostenible a 3-6 meses</td>
+                        <td>Gratis</td>
+                        <td>🆓 El filtro final universal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AliExpress Center</strong></td>
+                        <td>Proveedores</td>
+                        <td>Productos ganadores + datos de vendedores</td>
+                        <td>Gratis</td>
+                        <td>🆓 Punto de partida gratuito</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Quantitative Filters -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-data">Datos Duros</span>
+                <h3>🔢 Filtros Cuantitativos Estrictos</h3>
+                <p>Estos son los umbrales numéricos que definen "poca competencia":</p>
+                
+                <div class="grid-2" style="margin-top: 20px;">
+                    <div class="stat-box">
+                        <div class="stat-number">< 20</div>
+                        <div class="stat-label">Tiendas principales vendiendo el mismo producto</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">> 500</div>
+                        <div class="stat-label">Órdenes en AliExpress = demanda probada</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">< 50</div>
+                        <div class="stat-label">Competidores directos en ese nicho específico</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">> 30%</div>
+                        <div class="stat-label">Margen neto tras TODOS los costes</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box" style="margin-top: 20px;">
+                    <strong>⚠️ ALERTA:</strong> Las ventas estimadas de herramientas como Dropship.io tienen ~22% de margen de error. Úsalas como brújula, no como verdad absoluta.
+                </div>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-data">Lectura de Mercado</span>
+                <h3>🧠 Señales Cualitativas (Más Fiables)</h3>
+                
+                <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid var(--accent-1);">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <span class="step-number">1</span>
+                        <strong>Duración del Anuncio</strong>
+                    </div>
+                    <p style="font-size: 0.85rem;">Un anuncio activo +14 días = el competidor está ganando dinero. +30 días = producto validado. Es el indicador #1.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid var(--accent-2);">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <span class="step-number">2</span>
+                        <strong>Minería de Comentarios</strong>
+                    </div>
+                    <p style="font-size: 0.85rem;">Busca quejas en anuncios rivales: "mala calidad", "se rompió", "tardó mucho". Ahí está tu oportunidad de vender la solución.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid var(--accent-3);">
+                    <div style="display: flex; align-items: center; margin-bottom: 5px;">
+                        <span class="step-number">3</span>
+                        <strong>Contenido Orgánico (UGC)</strong>
+                    </div>
+                    <p style="font-size: 0.85rem;">+50 vídeos de usuarios en TikTok/Reels sobre el producto = interés real más allá de la publicidad pagada.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Triangulation Protocol -->
+        <div class="card glass">
+            <span class="badge badge-data">Método Central</span>
+            <h3>🎯 Protocolo de Triangulación: Las 5 Validaciones</h3>
+            <p>Un producto es ganador <strong>SOLO</strong> si pasa 4 o más de estas 5 pruebas simultáneamente:</p>
+            
+            <div class="grid-3" style="margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <div class="step-number">1</div>
+                    <h4 style="margin-top: 10px;">Predicción IA</h4>
+                    <p style="font-size: 0.85rem;">Sell The Trend o WinningHunter lo marcan como producto con momentum ascendente.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <div class="step-number">2</div>
+                    <h4 style="margin-top: 10px;">Validación Publicitaria</h4>
+                    <p style="font-size: 0.85rem;">Mínimo 3 competidores con anuncios activos durante +30 días (usar Minea).</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <div class="step-number">3</div>
+                    <h4 style="margin-top: 10px;">Tendencia Sostenible</h4>
+                    <p style="font-size: 0.85rem;">Google Trends con curva ascendente estable durante 3-6 meses.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <div class="step-number">4</div>
+                    <h4 style="margin-top: 10px;">Prueba Social Orgánica</h4>
+                    <p style="font-size: 0.85rem;">+50 publicaciones UGC en TikTok o hilos activos en Reddit.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <div class="step-number">5</div>
+                    <h4 style="margin-top: 10px;">Margen Saludable</h4>
+                    <p style="font-size: 0.85rem;">Beneficio neto superior al 30% tras producto, envío, ads y devoluciones.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(0, 245, 160, 0.2), rgba(0, 217, 255, 0.2)); padding: 20px; border-radius: 12px; border: 1px solid rgba(0, 245, 160, 0.3);">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">✅ 4/5 = LUZ VERDE</h4>
+                    <p style="font-size: 0.85rem;">Procede a lanzar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- All-in-One vs Modular -->
+        <div class="card glass">
+            <span class="badge badge-eco">Decisión Estratégica</span>
+            <h3>🥊 ¿Todo en Uno o Stack Modular?</h3>
+            
+            <div class="vs-container" style="margin-top: 20px;">
+                <div style="background: rgba(0, 245, 160, 0.1); padding: 25px; border-radius: 15px; border: 2px solid rgba(0, 245, 160, 0.3);">
+                    <h4 style="margin-top: 0;">📦 Todo en Uno</h4>
+                    <p style="color: var(--accent-1); font-weight: 600;">Sell The Trend · AutoDS</p>
+                    <ul style="padding-left: 20px; color: #ccc; font-size: 0.9rem; line-height: 1.8; margin-top: 15px;">
+                        <li>✅ Fácil y rápido de usar</li>
+                        <li>✅ Ideal para principiantes</li>
+                        <li>✅ Lanzamiento en días</li>
+                        <li>❌ Menos profundidad analítica</li>
+                        <li>❌ Poca flexibilidad</li>
+                    </ul>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <div style="background: rgba(0, 217, 255, 0.1); padding: 25px; border-radius: 15px; border: 2px solid rgba(0, 217, 255, 0.3);">
+                    <h4 style="margin-top: 0;">🧩 Stack Modular</h4>
+                    <p style="color: var(--accent-2); font-weight: 600;">Minea + Dropship.io + Trends</p>
+                    <ul style="padding-left: 20px; color: #ccc; font-size: 0.9rem; line-height: 1.8; margin-top: 15px;">
+                        <li>✅ Máxima profundidad de datos</li>
+                        <li>✅ Ventaja competitiva real</li>
+                        <li>✅ Adaptable y escalable</li>
+                        <li>❌ Curva de aprendizaje mayor</li>
+                        <li>❌ Requiere combinar fuentes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 20px;">
+                <strong>💡 LA ESTRATEGIA GANADORA:</strong> Empieza con Sell The Trend para validar tu primer producto rápido. Cuando escales y tu presupuesto de ads crezca, migra al stack modular para mantener ventaja competitiva.
+            </div>
+        </div>
+
+        <!-- Levels -->
+        <div class="grid-3">
+            <div class="level-card glass" style="border-color: rgba(0, 245, 160, 0.3);">
+                <h4 style="color: var(--accent-1);">🌱 Nivel 1: Principiante</h4>
+                <p class="level-price">Presupuesto: $0 - $30/mes</p>
+                <div class="tool-item"><span class="tool-name">Google Trends</span><span class="tool-desc">Gratis</span></div>
+                <div class="tool-item"><span class="tool-name">Koala Inspector</span><span class="tool-desc">Gratis</span></div>
+                <div class="tool-item"><span class="tool-name">AliExpress Center</span><span class="tool-desc">Gratis</span></div>
+                <div class="tool-item"><span class="tool-name">Meta Ad Library</span><span class="tool-desc">Gratis</span></div>
+                <div class="tool-item"><span class="tool-name">TikTok Search</span><span class="tool-desc">Gratis</span></div>
+            </div>
+
+            <div class="level-card glass" style="border-color: rgba(0, 217, 255, 0.3);">
+                <h4 style="color: var(--accent-2);">🚀 Nivel 2: Intermedio</h4>
+                <p class="level-price">Presupuesto: $30 - $80/mes</p>
+                <div class="tool-item"><span class="tool-name">Sell The Trend</span><span class="tool-desc">$29.97</span></div>
+                <div class="tool-item"><span class="tool-name">Minea</span><span class="tool-desc">$49</span></div>
+                <div class="tool-item"><span class="tool-name">Google Trends</span><span class="tool-desc">Gratis</span></div>
+                <div class="tool-item"><span class="tool-name">Koala Inspector</span><span class="tool-desc">Gratis</span></div>
+            </div>
+
+            <div class="level-card glass" style="border-color: rgba(255, 214, 10, 0.3);">
+                <h4 style="color: var(--accent-3);">👑 Nivel 3: Avanzado</h4>
+                <p class="level-price">Presupuesto: $100+/mes</p>
+                <div class="tool-item"><span class="tool-name">Minea</span><span class="tool-desc">$49</span></div>
+                <div class="tool-item"><span class="tool-name">Dropship.io</span><span class="tool-desc">$39</span></div>
+                <div class="tool-item"><span class="tool-name">PiPiAds</span><span class="tool-desc">$77</span></div>
+                <div class="tool-item"><span class="tool-name">Exploding Topics</span><span class="tool-desc">$39</span></div>
+            </div>
+        </div>
+
+        <!-- Express Method -->
+        <div class="card glass">
+            <span class="badge badge-alert">Táctica Express</span>
+            <h3>🕵️ Método de Espionaje en 4 Pasos (Sin Pagar Herramientas)</h3>
+            
+            <div class="grid-4" style="margin-top: 20px;">
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📚</div>
+                    <h4 style="margin-top: 0;">1. Meta Ad Library</h4>
+                    <p style="font-size: 0.85rem;">Busca tu nicho. Filtra por anuncios activos más de 2 semanas.</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🔍</div>
+                    <h4 style="margin-top: 0;">2. Koala Inspector</h4>
+                    <p style="font-size: 0.85rem;">Instálalo y entra en la tienda del anunciante. Mira sus best-sellers.</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
+                    <h4 style="margin-top: 0;">3. Google Trends</h4>
+                    <p style="font-size: 0.85rem;">Verifica que la curva sube estable desde hace 3 meses mínimo.</p>
+                </div>
+                <div style="text-align: center; padding: 20px;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🎵</div>
+                    <h4 style="margin-top: 0;">4. TikTok Hashtags</h4>
+                    <p style="font-size: 0.85rem;">Busca #TikTokMadeMeBuyIt + producto. Cuenta vídeos orgánicos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Mod 2 -->
+        <div class="card glass footer-card">
+            <p style="color: var(--accent-1); font-weight: 600; margin-bottom: 5px;">💎 REGLA DE ORO DEL MÓDULO 2</p>
+            <p class="final-advice">Ninguna herramienta sustituye al criterio. Un producto con "Success Score" alto pero con comentarios llenos de quejas es una trampa. La triangulación es tu seguro de vida: predicción IA + anuncios duraderos + tendencia estable + prueba social + margen real. Si fallan 2 de 5, descártalo y pasa al siguiente. La paciencia en la investigación es lo que separa a las tiendas que escalan de las que queman presupuesto.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MÓDULO 3: DOMINIO ORGÁNICO (AMPLIADO) -->
+    <!-- ============================================ -->
+    <div id="module3" class="module-section mod3">
+        <div class="glass module-header">
+            <div class="module-badge">Módulo 3: Tráfico Orgánico Viral</div>
+            <h2>DOMINIO ORGÁNICO CON IA</h2>
+            <p class="module-subtitle">Estrategias Virales + Fórmulas de Guion + Formatos Visuales + Stack de Herramientas</p>
+        </div>
+
+        <!-- Core Strategy -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-viral">Los 3 Pilares</span>
+                <h3>🎯 Filosofía del Orgánico Viral</h3>
+                <p><strong>El orgánico no es gratis, cuesta tiempo.</strong> Pero cuando funciona, te da tráfico ilimitado con CAC = $0.</p>
+                
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <h4 style="color: var(--accent-1); margin-top: 0;">Tráfico = Contenido</h4>
+                    <p style="font-size: 0.85rem;">El algoritmo no premia marcas, premia retención. Tu único KPI inicial: <strong>Watch Time > 70%</strong></p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <h4 style="color: var(--accent-1); margin-top: 0;">Conversión = Confianza</h4>
+                    <p style="font-size: 0.85rem;">El UGC real convierte 3x más que videos pulidos. La imperfección genera autenticidad.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <h4 style="color: var(--accent-1); margin-top: 0;">Escala = Volumen</h4>
+                    <p style="font-size: 0.85rem;">Mínimo 3 videos/día durante 90 días. El juego es estadístico: 1 de cada 20 viraliza.</p>
+                </div>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-viral">Content Pillars</span>
+                <h3>🏗️ Los 5 Pilares de Contenido</h3>
+                <p>Alterna entre estos 5 tipos de contenido para mantener consistencia y evitar el burnout creativo:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pilar</th>
+                            <th>Propósito</th>
+                            <th>Frecuencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Problema/Solución</strong></td>
+                            <td>Mostrar el dolor y tu producto como cura</td>
+                            <td>40%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ASMR/Satisfactorio</strong></td>
+                            <td>Retención visual pura, sin hablar</td>
+                            <td>20%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comparación</strong></td>
+                            <td>Tu producto vs. la alternativa mala</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Behind the Scenes</strong></td>
+                            <td>Construir confianza y marca personal</td>
+                            <td>15%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tendencias</strong></td>
+                            <td>Aprovechar audios virales del momento</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- NUEVO: Fórmulas de Guion -->
+        <div class="card glass">
+            <span class="badge badge-viral">Fórmulas de Guion</span>
+            <h3>📝 Las 6 Fórmulas de Copywriting Más Efectivas</h3>
+            <p><strong>No improvises.</strong> Estas fórmulas están probadas en millones de anuncios ganadores:</p>
+            
+            <div class="grid-3" style="margin-top: 20px;">
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">1. AIDA</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">La clásica universal</p>
+                    <div class="script-line"><strong>A</strong>tención: Hook impactante</div>
+                    <div class="script-line"><strong>I</strong>nterés: Dato sorprendente</div>
+                    <div class="script-line"><strong>D</strong>eseo: Beneficio emocional</div>
+                    <div class="script-line"><strong>A</strong>cción: CTA directo</div>
+                </div>
+
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">2. PAS</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">La más usada en UGC</p>
+                    <div class="script-line"><strong>P</strong>roblema: "¿Cansado de...?"</div>
+                    <div class="script-line"><strong>A</strong>gitación: Empeora el dolor</div>
+                    <div class="script-line"><strong>S</strong>olución: Tu producto al rescate</div>
+                </div>
+
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">3. BAB</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Before-After-Bridge</p>
+                    <div class="script-line"><strong>B</strong>efore: Situación actual mala</div>
+                    <div class="script-line"><strong>A</strong>fter: Vida ideal con producto</div>
+                    <div class="script-line"><strong>B</strong>ridge: Tu producto es el puente</div>
+                </div>
+
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">4. 4P</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Para storytelling</p>
+                    <div class="script-line"><strong>P</strong>romesa: Qué vas a lograr</div>
+                    <div class="script-line"><strong>P</strong>rueba: Demuestra con datos</div>
+                    <div class="script-line"><strong>P</strong>ropuesta: Tu solución única</div>
+                    <div class="script-line"><strong>P</strong>ush: Empuja a la acción</div>
+                </div>
+
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">5. Quest</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Para videos educativos</p>
+                    <div class="script-line"><strong>Q</strong>ualify: Filtra a tu audiencia</div>
+                    <div class="script-line"><strong>U</strong>nderstand: Empatiza</div>
+                    <div class="script-line"><strong>E</strong>ducate: Enseña algo</div>
+                    <div class="script-line"><strong>S</strong>timulate: Genera deseo</div>
+                    <div class="script-line"><strong>T</strong>ransition: CTA natural</div>
+                </div>
+
+                <div class="script-box">
+                    <h4 style="margin-top: 0; color: var(--accent-1);">6. Star-Story-Solution</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Para marcas personales</p>
+                    <div class="script-line"><strong>Star</strong>: Presenta al protagonista</div>
+                    <div class="script-line"><strong>Story</strong>: Cuenta su problema</div>
+                    <div class="script-line"><strong>Solution</strong>: Cómo lo resolvió</div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💡 Pro Tip:</strong> La fórmula PAS es la más efectiva para TikTok orgánico porque replica la conversación natural: "¿Te pasa esto? → Es horrible, ¿verdad? → Mira lo que encontré". Úsala como base y varía las otras.
+            </div>
+        </div>
+
+        <!-- NUEVO: Formatos Visuales -->
+        <div class="card glass">
+            <span class="badge badge-viral">Formatos Visuales</span>
+            <h3>🎬 Los 8 Formatos de Video Más Virales</h3>
+            <div class="grid-4" style="margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">👤</div>
+                    <h4 style="margin-top: 0;">POV</h4>
+                    <p style="font-size: 0.8rem;">Cámara en primera persona. El espectador ES el usuario.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Gadgets, cocina</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🗣️</div>
+                    <h4 style="margin-top: 0;">Talking Head</h4>
+                    <p style="font-size: 0.8rem;">Hablar directo a cámara. Máxima conexión personal.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Testimonios, reviews</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🎧</div>
+                    <h4 style="margin-top: 0;">ASMR</h4>
+                    <p style="font-size: 0.8rem;">Solo sonidos satisfactorios. Sin voz, solo experiencia.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Skincare, texturas</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📸</div>
+                    <h4 style="margin-top: 0;">Before/After</h4>
+                    <p style="font-size: 0.8rem;">Split screen o transición. Resultado instantáneo.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Limpieza, belleza</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🎬</div>
+                    <h4 style="margin-top: 0;">Demo Rápida</h4>
+                    <p style="font-size: 0.8rem;">Producto en acción, cortes rápidos, sin explicación.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Tech, herramientas</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📦</div>
+                    <h4 style="margin-top: 0;">Unboxing</h4>
+                    <p style="font-size: 0.8rem;">Abrir el paquete en tiempo real. Expectativa vs realidad.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Todos, genera confianza</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">🎭</div>
+                    <h4 style="margin-top: 0;">Skit/Comedia</h4>
+                    <p style="font-size: 0.8rem;">Mini historia graciosa con el producto integrado.</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Máxima viralidad</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; text-align: center;">
+                    <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
+                    <h4 style="margin-top: 0;">Listicle</h4>
+                    <p style="font-size: 0.8rem;">"3 razones por las que...", "5 cosas que no sabías"</p>
+                    <p style="font-size: 0.75rem; color: var(--accent-3);">Ideal para: Educación, valor</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hooks Frameworks -->
+        <div class="card glass">
+            <span class="badge badge-viral">Los Primeros 3 Segundos</span>
+            <h3>🪝 Frameworks de Hooks Virales</h3>
+            <p><strong>Regla de Oro:</strong> Si no capturas en 3 segundos, pierdes al 80% de la audiencia. TikTok/Reels premia el hook + retención.</p>
+            
+            <div class="grid-3" style="margin-top: 20px;">
+                <div class="hook-box">
+                    <div class="hook-title">🎭 Hook Relacional</div>
+                    <div class="hook-example">"Si tienes [problema común], necesitas ver esto..."</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Conecta con identidad del espectador</p>
+                </div>
+                
+                <div class="hook-box">
+                    <div class="hook-title">😱 Hook de Shock</div>
+                    <div class="hook-example">"No vas a creer lo que pasó cuando..."</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Rompe expectativas inmediatamente</p>
+                </div>
+                
+                <div class="hook-box">
+                    <div class="hook-title">❓ Hook de Pregunta</div>
+                    <div class="hook-example">"¿Sabías que estás haciendo [X] mal?"</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Crea curiosidad y autodiagnóstico</p>
+                </div>
+                
+                <div class="hook-box">
+                    <div class="hook-title">🚨 Hook FOMO</div>
+                    <div class="hook-example">"Deja de perder dinero en [X] ahora mismo"</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Apela al miedo a perder oportunidad</p>
+                </div>
+                
+                <div class="hook-box">
+                    <div class="hook-title">📊 Hook de Dato</div>
+                    <div class="hook-example">"El 87% de las personas no saben esto..."</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Estadísticas crean autoridad instantánea</p>
+                </div>
+                
+                <div class="hook-box">
+                    <div class="hook-title">🔥 Hook de Controversia</div>
+                    <div class="hook-example">"Lo que [marca famosa] no quiere que sepas"</div>
+                    <p style="font-size: 0.75rem; margin-top: 5px;">Genera debate y compartidos</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💡 Pro Tip:</strong> Graba 5 hooks diferentes para el mismo video y haz A/B testing. El hook correcto puede multiplicar x10 tus vistas sin cambiar el contenido.
+            </div>
+        </div>
+
+        <!-- Swipe File & Ethical Stealing -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-viral">Swipe File</span>
+                <h3>📚 Robo Ético de Creativos</h3>
+                <p><strong>No copies, replica patrones.</strong> Los ganadores dejan huellas. Tu trabajo es decodificarlas.</p>
+                
+                <h4>El Proceso de 4 Pasos:</h4>
+                <ol style="padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 2;">
+                    <li><strong>Captura:</strong> Usa Foreplay.co, SwipeKit o simplemente graba pantalla de ads virales</li>
+                    <li><strong>Decodifica:</strong> Analiza estructura (hook → problema → solución → CTA)</li>
+                    <li><strong>Remixa:</strong> Cambia el ángulo, el producto, el hook pero mantén el framework</li>
+                    <li><strong>Itera:</strong> Prueba 10 variaciones del mismo concepto ganador</li>
+                </ol>
+
+                <h4>Dónde Encontrar Oro:</h4>
+                <ul style="padding-left: 20px; color: #ccc; font-size: 0.85rem; line-height: 1.8;">
+                    <li><strong>TikTok Creative Center:</strong> Ads ganadores GRATIS con métricas reales</li>
+                    <li><strong>Meta Ad Library:</strong> Todos los ads activos de Facebook/Instagram</li>
+                    <li><strong>Hashtags:</strong> #tiktokmademebuyit #amazonfinds</li>
+                    <li><strong>Competidores:</strong> Estudia sus 10 videos más virales</li>
+                </ul>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-viral">Errores Fatales</span>
+                <h3>⚠️ Lo Que NUNCA Debes Hacer</h3>
+                
+                <div style="background: rgba(255, 0, 0, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #ff4444;">
+                    <strong style="color: #ff6b6b;">❌ Copiar literal</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Descargar y resubir el mismo video = Shadowban instantáneo</p>
+                </div>
+
+                <div style="background: rgba(255, 0, 0, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #ff4444;">
+                    <strong style="color: #ff6b6b;">❌ Ignorar el audio</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">El 70% del éxito en TikTok viene del audio trending</p>
+                </div>
+
+                <div style="background: rgba(255, 0, 0, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #ff4444;">
+                    <strong style="color: #ff6b6b;">❌ Videos muy largos</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Sweet spot: 15-30 segundos. Más de 60s = muerte de retención</p>
+                </div>
+
+                <div style="background: rgba(255, 0, 0, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #ff4444;">
+                    <strong style="color: #ff6b6b;">❌ Vender demasiado pronto</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Los primeros 10 videos deben ser valor puro, CERO venta</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Tools -->
+        <div class="card glass">
+            <span class="badge badge-ai">Stack de IA 2026</span>
+            <h3>🤖 Arsenal de IA para Creativos Virales</h3>
+            <p><strong>La IA no reemplaza tu estrategia, la multiplica x100.</strong> Usa estas herramientas para generar variaciones infinitas.</p>
+            
+            <div class="grid-3" style="margin-top: 20px;">
+                <div style="background: rgba(177, 78, 255, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(177, 78, 255, 0.3);">
+                    <h4 style="color: var(--accent-2); margin-top: 0;">🎬 Generación de Video</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Kling AI 2.5</span>
+                        <span class="tool-desc">Gratis, 4K, consistencia perfecta</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Veo 3 (Google)</span>
+                        <span class="tool-desc">Sin watermark en free tier</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Hailuo AI</span>
+                        <span class="tool-desc">Expresiones humanas realistas</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Runway Gen-4</span>
+                        <span class="tool-desc">Control cinematográfico total</span>
+                    </div>
+                </div>
+
+                <div style="background: rgba(0, 212, 255, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(0, 212, 255, 0.3);">
+                    <h4 style="color: var(--accent-3); margin-top: 0;">✍️ Scripts & Ideas</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Revid AI</span>
+                        <span class="tool-desc">Scripts virales desde URL</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">VEED Script Gen</span>
+                        <span class="tool-desc">Gratis, sin registro</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">ChatGPT/Claude</span>
+                        <span class="tool-desc">Hooks personalizados</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">TikTok Symphony</span>
+                        <span class="tool-desc">IA nativa de TikTok</span>
+                    </div>
+                </div>
+
+                <div style="background: rgba(0, 245, 160, 0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(0, 245, 160, 0.3);">
+                    <h4 style="color: #00f5a0; margin-top: 0;">🎵 Audio & Música</h4>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Suno AI</span>
+                        <span class="tool-desc">Crea canciones virales</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">ElevenLabs</span>
+                        <span class="tool-desc">Voces realistas clonables</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">CapCut Audio</span>
+                        <span class="tool-desc">Trending sounds library</span>
+                    </div>
+                    <div class="tool-item" style="border: none;">
+                        <span class="tool-name">Mubert</span>
+                        <span class="tool-desc">Música generativa sin copyright</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💡 Flujo de Trabajo IA:</strong> 
+                <ol style="padding-left: 20px; color: #ccc; font-size: 0.85rem; line-height: 1.8; margin-top: 10px;">
+                    <li>Usa <strong>Revid AI</strong> para generar 10 scripts desde tu producto</li>
+                    <li>Genera clips B-roll con <strong>Kling AI</strong> (texto → video)</li>
+                    <li>Clona tu voz con <strong>ElevenLabs</strong> para narración</li>
+                    <li>Ensambla todo en <strong>CapCut</strong> con trending audio</li>
+                    <li>Genera 5 variaciones de hook con <strong>ChatGPT</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Free Editing Tools -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-free">100% Gratis</span>
+                <h3>✂️ Herramientas de Edición Pro</h3>
+                <p><strong>No necesitas Adobe Premiere.</strong> Estas herramientas gratuitas hacen el 95% del trabajo.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Herramienta</th>
+                            <th>Mejor Para</th>
+                            <th>Plataforma</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CapCut</strong></td>
+                            <td>Edición rápida, templates virales, efectos nativos</td>
+                            <td>Móvil/PC/Web</td>
+                        </tr>
+                        <tr>
+                            <td><strong>DaVinci Resolve</strong></td>
+                            <td>Color grading profesional, edición avanzada</td>
+                            <td>PC/Mac</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VN Editor</strong></td>
+                            <td>Edición móvil sin watermark, multi-track</td>
+                            <td>iOS/Android</td>
+                        </tr>
+                        <tr>
+                            <td><strong>InShot</strong></td>
+                            <td>Edición rápida para principiantes</td>
+                            <td>Móvil</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Canva Video</strong></td>
+                            <td>Templates de marca, animaciones simples</td>
+                            <td>Web</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reap.video</strong></td>
+                            <td>Convertir videos largos en clips virales</td>
+                            <td>Web</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-free">Plugins & Extensiones</span>
+                <h3>🔌 Complementos Esenciales</h3>
+                
+                <div class="tool-item">
+                    <span class="tool-name">CapCut Auto Captions</span>
+                    <span class="tool-desc">Subtítulos automáticos en 50+ idiomas</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Remove.bg</span>
+                    <span class="tool-desc">Quita fondos de videos/imágenes en segundos</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Pexels/Pixabay</span>
+                    <span class="tool-desc">Stock footage gratis de alta calidad</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Opus Clip</span>
+                    <span class="tool-desc">IA que extrae clips virales de videos largos</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">TikTok Creative Center</span>
+                    <span class="tool-desc">Audios trending + plantillas gratis</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Notion Templates</span>
+                    <span class="tool-desc">Organiza tu calendario de contenido</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Google Trends</span>
+                    <span class="tool-desc">Valida temas antes de crear contenido</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posting Schedule -->
+        <div class="card glass">
+            <span class="badge badge-viral">Horarios Óptimos 2026</span>
+            <h3>⏰ Cuándo Publicar para Máxima Viralidad</h3>
+            <p><strong>El timing importa, pero la consistencia importa más.</strong> Publica en estas ventanas para maximizar el alcance inicial.</p>
+            
+            <div class="grid-4" style="margin-top: 20px;">
+                <div class="time-slot">
+                    <strong>🌅 Mañana</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;"><strong>6:00 - 9:00 AM</strong></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Personas despertando, commuting</p>
+                </div>
+                <div class="time-slot">
+                    <strong>🍽️ Mediodía</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;"><strong>12:00 - 1:00 PM</strong></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Pausa de almuerzo</p>
+                </div>
+                <div class="time-slot">
+                    <strong>☕ Tarde</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;"><strong>3:00 - 5:00 PM</strong></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Slump de la tarde</p>
+                </div>
+                <div class="time-slot">
+                    <strong>🌙 Noche</strong>
+                    <p style="font-size: 0.85rem; margin-top: 5px;"><strong>7:00 - 9:00 PM</strong></p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Prime time scrolling</p>
+                </div>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 20px;">
+                <strong>📅 Mejores Días por Plataforma:</strong>
+                <div class="grid-3" style="margin-top: 10px;">
+                    <div>
+                        <strong style="color: var(--accent-1);">TikTok:</strong>
+                        <p style="font-size: 0.85rem;">Lunes 1PM, Jueves 9AM, Domingo 9AM/1PM</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--accent-2);">Instagram Reels:</strong>
+                        <p style="font-size: 0.85rem;">Martes-Jueves 11AM-1PM, 7-9PM</p>
+                    </div>
+                    <div>
+                        <strong style="color: var(--accent-3);">YouTube Shorts:</strong>
+                        <p style="font-size: 0.85rem;">Viernes 5PM, Sábado 8PM EST</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Multi-Platform Distribution -->
+        <div class="grid-2">
+            <div class="card glass">
+                <span class="badge badge-viral">Distribución</span>
+                <h3>🌐 Estrategia Multi-Plataforma</h3>
+                <p><strong>1 video = 4 plataformas.</strong> No crees contenido específico para cada una, adapta el mismo video.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Plataforma</th>
+                            <th>Duración Ideal</th>
+                            <th>Estilo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>TikTok</strong></td>
+                            <td>15-30 seg</td>
+                            <td>Raw, auténtico, trending audio</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instagram Reels</strong></td>
+                            <td>15-60 seg</td>
+                            <td>Más pulido, estético, captions fuertes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>YouTube Shorts</strong></td>
+                            <td>30-60 seg</td>
+                            <td>Educativo, valor alto, SEO en título</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pinterest</strong></td>
+                            <td>15-30 seg</td>
+                            <td>Inspiracional, tutorial, evergreen</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Facebook Reels</strong></td>
+                            <td>30-90 seg</td>
+                            <td>Demografía mayor, storytelling</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>💡 Hack de Distribución:</strong> Graba en vertical 9:16 a 1080x1920, luego usa CapCut para auto-reframe a diferentes aspectos si es necesario. Sube el mismo video a todas las plataformas en diferentes horarios.
+                </div>
+            </div>
+
+            <div class="card glass">
+                <span class="badge badge-viral">Métricas Clave</span>
+                <h3>📊 Qué Medir y Cuándo Pivotar</h3>
+                
+                <div style="background: rgba(0, 245, 160, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #00f5a0;">
+                    <strong style="color: #00f5a0;">✅ Señales de Éxito</strong>
+                    <ul style="padding-left: 20px; color: #ccc; font-size: 0.85rem; line-height: 1.8; margin-top: 5px;">
+                        <li><strong>Watch Time > 70%</strong> = El contenido retiene</li>
+                        <li><strong>Shares > 5%</strong> = El contenido es compartible</li>
+                        <li><strong>Comments activos</strong> = Genera conversación</li>
+                        <li><strong>Guardados</strong> = Valor percibido alto</li>
+                    </ul>
+                </div>
+
+                <div style="background: rgba(255, 0, 0, 0.1); padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 3px solid #ff4444;">
+                    <strong style="color: #ff6b6b;">❌ Señales de Fracaso</strong>
+                    <ul style="padding-left: 20px; color: #ccc; font-size: 0.85rem; line-height: 1.8; margin-top: 5px;">
+                        <li><strong>Drop-off en seg 1-3</strong> = Hook malo</li>
+                        <li><strong>Watch Time < 40%</strong> = Contenido aburrido</li>
+                        <li><strong>Cero shares</strong> = No es compartible</li>
+                        <li><strong>Sin CTR al perfil</strong> = CTA débil</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>🔄 Regla de Iteración:</strong> Si un video tiene >100K vistas, replica el framework exacto (mismo hook, misma estructura, mismo audio) pero con diferente ángulo o producto. Los algoritmos premian la consistencia de formatos ganadores.
+                </div>
+            </div>
+        </div>
+
+        <!-- 90-Day Blueprint -->
+        <div class="card glass">
+            <span class="badge badge-viral">Plan de Acción</span>
+            <h3>🚀 Blueprint de 90 Días para Viralidad</h3>
+            <p><strong>El orgánico es un juego de volumen y paciencia.</strong> Sigue este plan al pie de la letra.</p>
+            
+            <div class="grid-3" style="margin-top: 20px;">
+                <div class="phase-card" style="background: linear-gradient(135deg, rgba(255, 0, 110, 0.15), rgba(177, 78, 255, 0.15)); border: 2px solid rgba(255, 0, 110, 0.3);">
+                    <div class="phase-number" style="color: var(--accent-1);">DÍAS 1-30</div>
+                    <h4 style="color: white; margin-top: 0;">Fase de Testing</h4>
+                    <ul style="padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 1.8;">
+                        <li>3 videos/día mínimo</li>
+                        <li>Probar 5 hooks diferentes por video</li>
+                        <li>NO vender, solo dar valor</li>
+                        <li>Construir swipe file de 100+ ads</li>
+                        <li>Meta: Encontrar 2-3 formatos ganadores</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(0, 245, 160, 0.15)); border: 2px solid rgba(0, 212, 255, 0.3);">
+                    <div class="phase-number" style="color: var(--accent-3);">DÍAS 31-60</div>
+                    <h4 style="color: white; margin-top: 0;">Fase de Optimización</h4>
+                    <ul style="padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 1.8;">
+                        <li>Duplicar formatos ganadores</li>
+                        <li>Introducir CTAs suaves</li>
+                        <li>Colaborar con micro-creadores</li>
+                        <li>A/B testing de thumbnails</li>
+                        <li>Meta: 1 video viral (>100K vistas)</li>
+                    </ul>
+                </div>
+
+                <div class="phase-card" style="background: linear-gradient(135deg, rgba(255, 214, 10, 0.15), rgba(255, 0, 110, 0.15)); border: 2px solid rgba(255, 214, 10, 0.3);">
+                    <div class="phase-number" style="color: var(--accent-4);">DÍAS 61-90</div>
+                    <h4 style="color: white; margin-top: 0;">Fase de Escalamiento</h4>
+                    <ul style="padding-left: 20px; color: #e0e0e0; font-size: 0.9rem; line-height: 1.8;">
+                        <li>Aumentar a 5 videos/día</li>
+                        <li>CTAs directos al producto</li>
+                        <li>Lanzar serie de contenido</li>
+                        <li>Considerar paid ads en ganadores</li>
+                        <li>Meta: Tráfico consistente a tienda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Mod 3 -->
+        <div class="card glass footer-card">
+            <p style="color: var(--accent-1); font-weight: 600; margin-bottom: 5px;">🔥 RECUERDA</p>
+            <p class="final-advice">La viralidad no es suerte, es ciencia. Hook + Retención + Consistencia = Tráfico Ilimitado. Tu competencia está publicando 1 video a la semana. Tú vas a publicar 21. Las matemáticas están de tu lado.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MÓDULO 4: CASOS PRÁCTICOS REALES -->
+    <!-- ============================================ -->
+    <div id="module4" class="module-section mod4">
+        <div class="glass module-header">
+            <div class="module-badge">Módulo 4: Aplicación Real</div>
+            <h2>3 CASOS PRÁCTICOS PASO A PASO</h2>
+            <p class="module-subtitle">Productos Diferentes | Estrategias Específicas | Guiones Reales | Administración Completa</p>
+        </div>
+
+        <!-- CASO 1: Gadget de Cocina -->
+        <div class="case-card glass" style="border-color: rgba(255, 214, 10, 0.3);">
+            <div class="case-header">
+                <div class="case-icon">🥑</div>
+                <div>
+                    <div class="case-title">CASO 1: Cortador de Aguacate 3 en 1</div>
+                    <div class="case-subtitle">Nicho: Cocina | Precio: $19.99 | Margen: 65%</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>Investigación del Producto</strong>
+                    <p>Búsqueda en AliExpress: "avocado slicer" → 2,300 órdenes. TikTok: #avocadoslicer → 890 videos. Google Trends: subida estable 4 meses. Meta Ad Library: 4 competidores con ads activos +3 semanas. ✅ Pasa 5/5 validaciones.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>Creación de Tienda</strong>
+                    <p>Shopify Basic ($39/mes) + Tema Dawn (gratis) + PageFly (gratis). Paleta: Verde cocina (#4A7C59) + Crema (#F7F4EF) + Naranja CTA (#FF6B35). Página única con secciones: Hero con video, problema, demo, testimonios, FAQ, CTA sticky.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>Conexión con Proveedor</strong>
+                    <p>CJ Dropshipping (fase inicial <30 orders). Pedido de muestra: $8.50 + envío. Tiempo de llegada: 12 días. Calidad verificada. Precio por unidad: $3.20. Envío ePacket: $2.10. Margen neto tras fees: 65%.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>Estrategia de Contenido</strong>
+                    <p><strong>Formato principal:</strong> POV + Demo rápida. <strong>Fórmula:</strong> PAS. <strong>Frecuencia:</strong> 3 videos/día en TikTok + Reels + Shorts.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>Guion Específico del Video Ganador</strong>
+                    <div class="script-box" style="margin-top: 10px;">
+                        <div class="script-line">
+                            <span class="script-timing">[0-2s] HOOK VISUAL:</span>
+                            <p>Manos luchando con cuchillo, aguacate destrozado. Texto: "¿Sigues haciendo esto?"</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[2-5s] PROBLEMA:</span>
+                            <p>Voz en off: "Cada vez que corto un aguacate pierdo la mitad y me tardo 5 minutos..."</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[5-12s] SOLUCIÓN:</span>
+                            <p>Manos usando el cortador: corte perfecto en 3 segundos. ASMR del click. Texto: "Hasta que encontré ESTO"</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[12-18s] DEMO:</span>
+                            <p>3 usos rápidos: cortar, quitar hueso, laminar. Cortes al ritmo de la música trending.</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[18-22s] CTA:</span>
+                            <p>"Link en bio si quieres dejar de sufrir con los aguacates 🥑" + flecha animada hacia abajo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">6</div>
+                <div class="timeline-content">
+                    <strong>Administración de Ventas</strong>
+                    <p><strong>Día 1-7:</strong> 0 ventas, 45 videos publicados. <strong>Día 8:</strong> Primer video viral (230K vistas), 12 ventas. <strong>Día 15:</strong> Segundo viral (890K), 87 ventas/día. <strong>Acciones:</strong> Responder comentarios en <1h, emails de seguimiento con Klaviyo, upsell de "pack x2" aumenta AOV de $19 a $32. <strong>Proveedor:</strong> Transición a agente privado al superar 80 orders/día (ahorro 22%).</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>📊 RESULTADO FINAL:</strong> $4,200 en ventas el primer mes. $11,800 el segundo mes. Margen neto: $7,670. Todo con tráfico 100% orgánico.
+            </div>
+        </div>
+
+        <!-- CASO 2: Skincare -->
+        <div class="case-card glass" style="border-color: rgba(177, 78, 255, 0.3);">
+            <div class="case-header">
+                <div class="case-icon">✨</div>
+                <div>
+                    <div class="case-title">CASO 2: Rodillo de Hielo Facial</div>
+                    <div class="case-subtitle">Nicho: Belleza/Skincare | Precio: $24.99 | Margen: 72%</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>Investigación del Producto</strong>
+                    <p>Tendencia "skin icing" explotando en TikTok: +340% en 2 meses. AliExpress: 1,800 órdenes en rodillos similares. Competencia baja: solo 8 tiendas dedicadas. Ángulo único: "facial en casa sin gastar $200 en spa".</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>Creación de Tienda</strong>
+                    <p>Tema Sense (gratis, optimizado para belleza). Paleta: Rosa palo (#F5E6E8) + Blanco puro + Rosa intenso (#B76E79). Tipografía elegante: Playfair Display + Inter. Fotografías con luz natural, modelos reales (no stock).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>Conexión con Proveedor</strong>
+                    <p>Zendrop (mejor para branding desde el inicio). Packaging personalizado con logo: +$0.80/unidad. Tarjeta de agradecimiento incluida. Tiempo de envío USA: 7-9 días. Precio unidad: $4.10 con packaging.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>Estrategia de Contenido</strong>
+                    <p><strong>Formato principal:</strong> ASMR + Before/After. <strong>Fórmula:</strong> BAB. <strong>Diferenciador:</strong> Contenido educativo sobre beneficios del hielo facial (dermatólogos lo recomiendan). Colaboración con 3 micro-influencers de skincare (5K-20K seguidores) por producto gratis.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>Guion Específico del Video Ganador</strong>
+                    <div class="script-box" style="margin-top: 10px;">
+                        <div class="script-line">
+                            <span class="script-timing">[0-3s] HOOK ASMR:</span>
+                            <p>Sonido satisfactorio del hielo crujiendo. Primer plano del rodillo congelado. Sin texto, solo sonido. Retención instantánea.</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[3-6s] BEFORE:</span>
+                            <p>Cara hinchada por la mañana, ojos cansados. Texto: "Yo todas las mañanas a las 6AM..."</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[6-15s] RITUAL:</span>
+                            <p>Secuencia ASMR: sacar del congelador, aplicar en mejillas, frente, ojos. Sonidos reales amplificados. Música lo-fi suave de fondo.</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[15-20s] AFTER:</span>
+                            <p>Transición rápida: cara desinflamada, piel brillante. Texto: "Vs. ahora ✨" Split screen del antes/después.</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[20-25s] CTA SUAVE:</span>
+                            <p>"Mi secreto de $25 que reemplaza mi facial de $200. Link en bio 💆‍♀️" Voz suave, casi susurrada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">6</div>
+                <div class="timeline-content">
+                    <strong>Administración de Ventas</strong>
+                    <p><strong>Semana 1:</strong> 8 ventas de amigos/familia + micro-influencers. <strong>Semana 2:</strong> Video ASMR alcanza 1.2M vistas. 156 ventas en 48h. <strong>Gestión:</strong> Email automático "tu ritual de mañana te espera" + guía PDF de uso. Upsell: "Dúo rodillo + gua sha" (+$12). <strong>Soporte:</strong> Plantillas de respuesta para dudas sobre uso. Tasa de devolución: 2.1% (muy baja).</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>📊 RESULTADO FINAL:</strong> $8,900 primer mes. $23,400 segundo mes con 2 videos virales más. Marca construida: 15K seguidores orgánicos. Preparando transición a marca propia con fabricante directo.
+            </div>
+        </div>
+
+        <!-- CASO 3: Mascotas -->
+        <div class="case-card glass" style="border-color: rgba(0, 212, 255, 0.3);">
+            <div class="case-header">
+                <div class="case-icon">🐕</div>
+                <div>
+                    <div class="case-title">CASO 3: Cepillo Deshedding para Perros</div>
+                    <div class="case-subtitle">Nicho: Mascotas | Precio: $29.99 | Margen: 68%</div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>Investigación del Producto</strong>
+                    <p>Nicho mascotas = compradores emocionales con alto LTV. Producto: cepillo tipo Furminator pero genérico. AliExpress: 4,200 órdenes. TikTok: #dogshedding → 2.1K videos. Competidores con ads activos: 6 (validado). Ángulo: "tu sofá te lo agradecerá".</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>Creación de Tienda</strong>
+                    <p>Tema Refresh (gratis). Paleta: Turquesa (#4ECDC4) + Coral (#FF6B6B) + Crema (#FFF9E3). Secciones con GIFs de perros felices. Contador de "pelos removidos" animado. Testimonios con fotos de clientes reales y sus mascotas.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>Conexión con Proveedor</strong>
+                    <p>CJ Dropshipping inicialmente. Muestra: $11.20. Calidad del cepillo: excelente, cerdas de acero inoxidable. <strong>Problema detectado:</strong> envío 14 días. <strong>Solución:</strong> Negociación con agente privado en semana 3 (ya tenía 45 orders/día). Nuevo envío: 6-8 días. Ahorro: $1.40/unidad.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>Estrategia de Contenido</strong>
+                    <p><strong>Formato principal:</strong> Satisfactorio + Demo. <strong>Fórmula:</strong> Quest. <strong>Clave:</strong> El "money shot" es la montaña de pelo removido. Contenido UGC: pedir a clientes videos de sus perros usando el cepillo a cambio de 20% descuento. Serie: "Razas con más pelo" (educativo + venta suave).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>Guion Específico del Video Ganador</strong>
+                    <div class="script-box" style="margin-top: 10px;">
+                        <div class="script-line">
+                            <span class="script-timing">[0-2s] HOOK VISUAL SHOCK:</span>
+                            <p>Primer plano: mano sacando una MONTAÑA de pelo del cepillo. Sonido satisfactorio. Texto: "Esto salió de UN solo perro 😱"</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[2-5s] CONTEXTO:</span>
+                            <p>Corte a Golden Retriever mirando a cámara. Voz: "Conozcan a Max. Max tiene un problema de pelo..."</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[5-12s] DEMO SATISFACTORIA:</span>
+                            <p>Cepillado en cámara lenta. Cada pasada revela más pelo. El perro disfruta (importante: mostrar que no duele). Música trending upbeat.</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[12-18s] RESULTADO:</span>
+                            <p>Montaña de pelo al lado del perro. Perro feliz moviendo cola. Texto: "Max feliz. Sofá feliz. Yo feliz."</p>
+                        </div>
+                        <div class="script-line">
+                            <span class="script-timing">[18-24s] CTA EMOCIONAL:</span>
+                            <p>"Si tu perro deja pelo en todas partes, necesita esto. Link en bio 🐕❤️" + botón animado "Ver el cepillo mágico".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-step">6</div>
+                <div class="timeline-content">
+                    <strong>Administración de Ventas</strong>
+                    <p><strong>Día 1-10:</strong> 23 ventas, 2 videos con >50K vistas. <strong>Día 11:</strong> Video "montaña de pelo" alcanza 3.4M vistas. 340 ventas en 72h. <strong>Sistema:</strong> Email post-compra con guía de cepillado por raza. Upsell: "Kit completo" (cepillo + guante + spray) +$18. <strong>Atención:</strong> FAQ automático para dudas sobre tamaños de perro. <strong>Escala:</strong> Contratación de VA para soporte al cliente al superar 100 orders/día.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>📊 RESULTADO FINAL:</strong> $14,200 primer mes. $38,600 segundo mes. $67,000 tercer mes. Tienda expandida a 3 productos complementarios. Marca con 45K seguidores. En camino a facturación de 7 cifras anuales.
+            </div>
+        </div>
+
+        <!-- Footer Mod 4 -->
+        <div class="card glass footer-card">
+            <p style="color: var(--accent-1); font-weight: 600; margin-bottom: 5px;">📋 LECCIÓN DE LOS 3 CASOS</p>
+            <p class="final-advice">Los 3 casos siguen el MISMO patrón: investigación rigurosa (5/5 validaciones) → tienda simple pero pulida → proveedor validado con muestra → contenido orgánico consistente (3/día mínimo) → guion con fórmula probada (PAS/BAB) → hook visual en primeros 2 segundos → iteración basada en métricas → escalamiento cuando un video viraliza. La diferencia entre el éxito y el fracaso no es el producto, es la CONSISTENCIA en la ejecución durante los primeros 30 días.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MÓDULO 5: DROPSHIPPERS MILLONARIOS -->
+    <!-- ============================================ -->
+    <div id="module5" class="module-section mod5">
+        <div class="glass module-header">
+            <div class="module-badge">Módulo 5: Casos de Éxito Reales</div>
+            <h2>DROPSHIPPERS MILLONARIOS</h2>
+            <p class="module-subtitle">Historias Reales de Cero a Millones con Tráfico Orgánico | Paso a Paso Detallado</p>
+        </div>
+
+        <!-- Intro -->
+        <div class="card glass">
+            <span class="badge badge-million">Contexto Importante</span>
+            <h3>⚠️ Antes de Empezar: La Realidad</h3>
+            <p>Estos casos son <strong>reales y verificables</strong>, pero representan el 1% del 1% de quienes lo intentan. Por cada millonario hay miles que abandonaron. La diferencia no fue suerte, fue:</p>
+            <div class="grid-3" style="margin-top: 15px;">
+                <div class="pillar-card">
+                    <h4 style="margin-top: 0;">🎯 Timing Perfecto</h4>
+                    <p style="font-size: 0.85rem;">Entraron cuando la plataforma era nueva (TikTok 2019-2020, Shopify 2016-2018)</p>
+                </div>
+                <div class="pillar-card">
+                    <h4 style="margin-top: 0;">🔄 Iteración Obsesiva</h4>
+                    <p style="font-size: 0.85rem;">Probaron 20-50 productos antes de encontrar el ganador</p>
+                </div>
+                <div class="pillar-card">
+                    <h4 style="margin-top: 0;">📹 Volumen Brutal</h4>
+                    <p style="font-size: 0.85rem;">Publicaban 3-10 videos diarios durante meses sin resultados</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caso 1: Irwin Domínguez -->
+        <div class="millionaire-card glass">
+            <div class="millionaire-header">
+                <div>
+                    <div class="millionaire-name">💰 Irwin Domínguez</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">El primer dropshipper en llegar a $1M en 8 meses (2016)</p>
+                </div>
+                <div class="millionaire-result">$1,000,000+ en 8 meses</div>
+            </div>
+
+            <h4>📖 Su Historia Paso a Paso:</h4>
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>El Inicio (Sin Experiencia)</strong>
+                    <p>Irwin era un contador de San Diego sin experiencia en e-commerce. Empezó con $0 de presupuesto publicitario. Su estrategia: Facebook Ads con presupuesto de $5/día probando productos genéricos de AliExpress.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>El Fracaso Inicial (3 meses)</strong>
+                    <p>Probó más de 30 productos. Perdió $3,000 en anuncios que no convertían. La mayoría de personas abandonan aquí. Irwin analizó cada fallo: el problema no era el producto, era la PRESENTACIÓN.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>El Cambio de Estrategia</strong>
+                    <p>Dejó de vender "productos" y empezó a vender "soluciones a problemas específicos". Encontró un nicho: gadgets de cocina que resolvían dolores reales. Creó videos demostrativos simples pero efectivos.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>El Producto Ganador</strong>
+                    <p>Encontró un cortador de verduras multifuncional. En lugar de un anuncio genérico, creó 12 variaciones de creativos diferentes. Uno de ellos mostró un ROI de 4x. Escaló ese único creativo agresivamente.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>La Escalada a $1M</strong>
+                    <p>Con un creativo ganador, aumentó presupuesto de $5 a $500/día gradualmente. En 8 meses facturó $1,000,000 (no beneficio, facturación). Beneficio neto estimado: $300,000-$400,000. Shopify lo entrevistó y se convirtió en caso de estudio oficial.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💎 Lección Clave:</strong> Irwin no tuvo suerte. Tuvo la disciplina de probar 30+ productos, analizar cada fracaso y pivotar hasta encontrar el ángulo correcto. Su frase famosa: "El producto ganador no es el que te gusta, es el que el mercado ya está comprando".
+            </div>
+        </div>
+
+        <!-- Caso 2: Aloysius Chay & Galvin Bay -->
+        <div class="millionaire-card glass">
+            <div class="millionaire-header">
+                <div>
+                    <div class="millionaire-name">💰 Aloysius Chay & Galvin Bay</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Pareja de Singapur que construyó imperio de moda con Instagram orgánico (2017)</p>
+                </div>
+                <div class="millionaire-result">$1,000,000+ en 12 meses</div>
+            </div>
+
+            <h4>📖 Su Historia Paso a Paso:</h4>
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>El Inicio ($0 Presupuesto)</strong>
+                    <p>Aloysius y Galvin empezaron sin dinero para anuncios. Su única ventaja: entendían Instagram mejor que nadie. Crearon una cuenta de moda femenina y empezaron a publicar contenido de valor: tips de estilo, combinaciones de outfits.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>Construcción de Audiencia (3 meses)</strong>
+                    <p>Publicaban 3-5 posts diarios. Respondían CADA comentario. Colaboraban con micro-influencers a cambio de producto gratis. En 3 meses alcanzaron 50K seguidores orgánicos SIN gastar un centavo en publicidad.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>El Modelo de Negocio</strong>
+                    <p>Dropshipping de ropa de AliExpress, pero con una diferencia clave: curación extrema. Solo vendían piezas que ellos mismos usarían. Fotografías profesionales con modelos reales (Galvin era la modelo principal). Estética consistente y reconocible.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>La Viralización</strong>
+                    <p>Un post de "outfit transformation" alcanzó 2M de likes. El tráfico a la tienda explotó: 10,000 visitas en 24 horas. Primera semana: $12,000 en ventas. El algoritmo de Instagram en 2017 premiaba el contenido orgánico como nunca antes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>Escalamiento y Marca Propia</strong>
+                    <p>Al llegar a $1M en facturación, transicionaron de dropshipping puro a marca propia (The Pastel Collective). Hoy manejan múltiples marcas y enseñan e-commerce. Su audiencia combinada supera 1M de seguidores.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💎 Lección Clave:</strong> Demostraron que el tráfico orgánico puede superar al pagado si construyes una AUDIENCIA primero y vendes después. Su estrategia de "valor antes que venta" es el blueprint del marketing moderno.
+            </div>
+        </div>
+
+        <!-- Caso 3: Cole Turner -->
+        <div class="millionaire-card glass">
+            <div class="millionaire-header">
+                <div>
+                    <div class="millionaire-name">💰 Cole Turner</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">De empleado a $2M+/año con TikTok orgánico (2020-2021)</p>
+                </div>
+                <div class="millionaire-result">$2,000,000+ en 18 meses</div>
+            </div>
+
+            <h4>📖 Su Historia Paso a Paso:</h4>
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>El Contexto (2020: TikTok Explota)</strong>
+                    <p>Cole era un empleado normal cuando TikTok empezó a crecer exponencialmente durante la pandemia. Vio la oportunidad: la plataforma regalaba alcance orgánico como ninguna otra. Creó su primera cuenta de nicho: gadgets de hogar.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>La Estrategia de Volumen</strong>
+                    <p>Publicaba 5-8 videos diarios durante 90 días. Sin mostrar cara, solo demos de productos. La mayoría tenían 200-500 vistas. Pero 1 de cada 50 alcanzaba 100K+. Su mentalidad: "es un juego de probabilidades, necesito suficientes tickets de lotería".</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>El Primer Viral (Día 47)</strong>
+                    <p>Un video de un organizador de cables alcanzó 2.3M de vistas. 400 ventas en 24 horas. Cole reinivirtió todo en comprar muestras de productos similares y crear más contenido del mismo estilo. El algoritmo identificó su cuenta como "experta en organización" y amplificó todo.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>Sistema de Réplica</strong>
+                    <p>Cole documentó exactamente qué hacía viral cada video: hook en 1.5 segundos, problema claro, solución satisfactoria, música trending. Creó una "fábrica de contenido": 3 editores trabajando con él, publicando 20 videos/día entre 4 cuentas diferentes.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>El Salto a Millonario</strong>
+                    <p>En 18 meses, sus 4 tiendas generaban $150K-$200K/mes. Todo con tráfico orgánico de TikTok. Cuando TikTok Shop lanzó en 2022, fue de los primeros en integrarse, multiplicando conversiones al eliminar la fricción de salir de la app.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💎 Lección Clave:</strong> Cole demostró que el volumen vence al talento. No era el mejor creador, era el más consistente. Su frase: "No necesitas ser viral una vez, necesitas ser viral cada semana. Y eso solo se logra con volumen brutal".
+            </div>
+        </div>
+
+        <!-- Caso 4: Sebastian Esqueda (Biaheza) -->
+        <div class="millionaire-card glass">
+            <div class="millionaire-header">
+                <div>
+                    <div class="millionaire-name">💰 Sebastian Esqueda (Biaheza)</div>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Adolescente que construyó imperio documentando todo en YouTube (2019-presente)</p>
+                </div>
+                <div class="millionaire-result">$5,000,000+ acumulado</div>
+            </div>
+
+            <h4>📖 Su Historia Paso a Paso:</h4>
+            <div class="timeline-item">
+                <div class="timeline-step">1</div>
+                <div class="timeline-content">
+                    <strong>El Inicio a los 16 Años</strong>
+                    <p>Sebastian empezó con $300 ahorrados de trabajos ocasionales. Su estrategia inicial: dropshipping tradicional con Facebook Ads. Fracasó en sus primeros 5 productos. Pero documentó TODO en YouTube desde el día 1.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">2</div>
+                <div class="timeline-content">
+                    <strong>El Doble Juego</strong>
+                    <p>Mientras probaba productos, su canal de YouTube crecía. Se dio cuenta de que podía monetizar DOS veces: con las tiendas y con el contenido sobre las tiendas. Cada video de "probando este producto" era marketing gratuito para su tienda.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">3</div>
+                <div class="timeline-content">
+                    <strong>La Estrategia Híbrida</strong>
+                    <p>Biaheza perfeccionó un modelo: encontrar productos con potencial viral, crear contenido orgánico masivo (TikTok + Reels + Shorts), y usar el contenido como validación antes de gastar en anuncios. Solo escalaba con paid lo que ya funcionaba orgánicamente.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">4</div>
+                <div class="timeline-content">
+                    <strong>Los Productos Ganadores</strong>
+                    <p>Sus mayores éxitos: lámpara de galaxia ($2M+ en ventas), corrector de postura, gadgets de cocina. Cada producto seguía el mismo patrón: efecto "wow" visual instantáneo, precio impulsivo ($20-$40), demostración satisfactoria en menos de 10 segundos.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-step">5</div>
+                <div class="timeline-content">
+                    <strong>El Imperio Actual</strong>
+                    <p>Hoy Biaheza maneja múltiples tiendas, tiene 3M+ suscriptores en YouTube, y su modelo de negocio es híbrido: e-commerce + creación de contenido + educación. Demuestra que la transparencia y documentar el proceso puede ser tan rentable como el negocio en sí.</p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>💎 Lección Clave:</strong> Sebastian demostró el poder de la "marca personal como canal de adquisición". Su audiencia confiaba en él porque veían sus fracasos y éxitos en tiempo real. La autenticidad convierte mejor que cualquier anuncio pulido.
+            </div>
+        </div>
+
+        <!-- Patrones Comunes -->
+        <div class="card glass">
+            <span class="badge badge-million">Análisis Cruzado</span>
+            <h3>🔍 Los 5 Patrones que TODOS Comparten</h3>
+            <div class="grid-3" style="margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">1️⃣ Fracaso Antes del Éxito</h4>
+                    <p style="font-size: 0.85rem;">Todos probaron 10-50 productos fallidos antes del ganador. El fracaso es parte del proceso, no una señal para abandonar.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">2️⃣ Timing de Plataforma</h4>
+                    <p style="font-size: 0.85rem;">Todos entraron cuando su plataforma principal estaba en fase de crecimiento explosivo y el alcance orgánico era generoso.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">3️⃣ Volumen sobre Perfección</h4>
+                    <p style="font-size: 0.85rem;">Publicaban 3-10 piezas de contenido diarias. La cantidad eventualmente genera calidad porque aprendes más rápido.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">4️⃣ Producto con Efecto Wow</h4>
+                    <p style="font-size: 0.85rem;">Todos sus productos ganadores tenían una demostración visual impactante en menos de 5 segundos. Sin excepción.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px;">
+                    <h4 style="margin-top: 0;">5️⃣ Reinversión Total</h4>
+                    <p style="font-size: 0.85rem;">Los primeros $10K-$50K se reinivirtieron completamente: mejores muestras, más contenido, equipo. No sacaron ganancias hasta estabilizar.</p>
+                </div>
+                <div style="background: linear-gradient(135deg, rgba(177, 78, 255, 0.2), rgba(255, 214, 10, 0.2)); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 214, 10, 0.3);">
+                    <h4 style="margin-top: 0; color: var(--accent-2);">🏆 El Factor X</h4>
+                    <p style="font-size: 0.85rem;">Persistencia irracional. Todos continuaron cuando el 99% habría abandonado. La diferencia entre ellos y los demás fue simplemente no rendirse.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Mod 5 -->
+        <div class="card glass footer-card">
+            <p style="color: var(--accent-1); font-weight: 600; margin-bottom: 5px;">💰 LA VERDAD INCÓMODA</p>
+            <p class="final-advice">Estos casos son reales, pero son la excepción, no la regla. Por cada Irwin Domínguez hay 10,000 personas que perdieron dinero. La diferencia no fue suerte ni talento excepcional: fue persistencia, volumen de prueba y capacidad de aprender del fracaso. Si estás dispuesto a probar 30 productos, publicar 500 videos y trabajar 6-12 meses sin resultados garantizados, tienes una oportunidad real. Si buscas dinero rápido, este no es tu camino. El dropshipping es un negocio real que requiere trabajo real. Pero para quienes lo tratan como tal, el potencial es ilimitado.</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- FOOTER GLOBAL -->
+    <!-- ============================================ -->
+    <div class="card glass footer-card" style="margin-top: 20px;">
+        <p style="color: #00d2ff; font-weight: 700; margin-bottom: 10px;">🎓 CURSO COMPLETO DROPSHIPPING PRO - EDICIÓN DEFINITIVA</p>
+        <p class="final-advice" style="font-size: 1.1rem;">
+            <strong>Módulo 1</strong> te dio la base técnica + herramientas IA + psicología del color. 
+            <strong>Módulo 2</strong> te enseñó a encontrar productos ganadores con datos. 
+            <strong>Módulo 3</strong> te dio el sistema de tráfico orgánico + fórmulas de guion + formatos visuales. 
+            <strong>Módulo 4</strong> te mostró 3 casos prácticos completos paso a paso. 
+            <strong>Módulo 5</strong> te inspiró con historias reales de millonarios. 
+            <br><br>
+            <strong style="color: #ff006e;">Ahora tienes TODO. La única variable que falta es tu ejecución.</strong>
+        </p>
+    </div>
+</div>
+
+<script>
+    function showModule(moduleNumber) {
+        document.querySelectorAll('.module-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.module-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        document.getElementById('module' + moduleNumber).classList.add('active');
+        
+        const buttons = document.querySelectorAll('.module-btn');
+        buttons[moduleNumber - 1].classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
